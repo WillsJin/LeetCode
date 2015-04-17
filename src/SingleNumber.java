@@ -1,5 +1,9 @@
 /**
  * Created by wills on 15/4/16.
+ *
+ * See https://leetcode.com/problems/single-number/
+ *
+ * Author https://github.com/WillsJin
  */
 public class SingleNumber
 {

@@ -1,5 +1,9 @@
 /**
  * Created by wills on 15/4/16.
+ *
+ * See https://leetcode.com/problems/number-of-1-bits/
+ *
+ * Author https://github.com/WillsJin
  */
 public class NumberOf1Bits
 {
