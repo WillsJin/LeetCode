@@ -3,6 +3,8 @@
  *
  * See https://leetcode.com/problems/same-tree/
  *
+ * With Public Tree Node
+ *
  * Author https://github.com/WillsJin
  */
 public class SameTree
