@@ -11,6 +11,8 @@
  *
  * 因而，一个指针从第一次相遇得节点开始走，另一个从起点开始走，第一次相遇即为环中第一个节点。
  *
+ * PS: 这个程序没有问题，提交以后超时，大概是Java的原因，实用JavaScript语言之后，Accepted.
+ *
  * Author https://github.com/WillsJin
  *
  */
@@ -23,10 +25,8 @@ public class LinkedListCycleII
         p = q = head;
 
         boolean flag = false;
-        int count = 0;
         while (null != p && null != p.next && null != q.next && null != q.next.next) {
 
-            count++;
             p = p.next;
             q = q.next.next;
 
@@ -41,17 +41,12 @@ public class LinkedListCycleII
         }
         p = head;
 
-        for (int i = 0; i < count; i++) {
+        while (!p.equals(q)) {
             p = p.next;
+            q = q.next;
         }
 
         return p;
-//        while (!p.equals(q)) {
-//            p = p.next;
-//            q = q.next;
-//        }
-//
-//        return p;
     }
 
     public static void main(String[] args) {
