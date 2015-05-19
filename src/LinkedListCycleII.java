@@ -49,61 +49,67 @@ public class LinkedListCycleII
         return p;
     }
 
+    /**
+     * Definition for singly-linked list.
+     * class ListNode {
+     *     int val;
+     *     ListNode next;
+     *     ListNode(int x) {
+     *         val = x;
+     *         next = null;
+     *     }
+     * }
+     */
+    class ListNode {
+        int val;
+        ListNode next;
+        ListNode(int x) {
+            val = x;
+            next = null;
+        }
+    }
+
     public static void main(String[] args) {
 
-        ListNode head = new ListNode(0);
+        LinkedListCycleII solution = new LinkedListCycleII();
+
+        ListNode head = solution.new ListNode(0);
         ListNode node = head;
 
-        node.next = new ListNode(1);
+        node.next = solution.new ListNode(1);
         node = node.next;
-        node.next = new ListNode(2);
+        node.next = solution.new ListNode(2);
         node = node.next;
-        node.next = new ListNode(3);
+        node.next = solution.new ListNode(3);
         node = node.next;
-        node.next = new ListNode(4);
+        node.next = solution.new ListNode(4);
         node = node.next;
-        node.next = new ListNode(5);
+        node.next = solution.new ListNode(5);
         node = node.next;
         ListNode cycle = node;
-        node.next = new ListNode(6);
+        node.next = solution.new ListNode(6);
         node = node.next;
-        node.next = new ListNode(7);
+        node.next = solution.new ListNode(7);
         node = node.next;
-        node.next = new ListNode(8);
+        node.next = solution.new ListNode(8);
         node = node.next;
-        node.next = new ListNode(9);
+        node.next = solution.new ListNode(9);
         node = node.next;
 
         node.next = cycle;
 
-        head = new ListNode(3);
+        head = solution.new ListNode(3);
         node = head;
 
-        node.next = new ListNode(2);
+        node.next = solution.new ListNode(2);
         node = node.next;
-        node.next = new ListNode(0);
+        node.next = solution.new ListNode(0);
         node = node.next;
-        node.next = new ListNode(-4);
+        node.next = solution.new ListNode(-4);
         node = node.next;
         node.next = head;
 
-        LinkedListCycleII solution = new LinkedListCycleII();
         ListNode result = solution.detectCycle(head);
         System.out.println(result.val);
     }
 }
-
-
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
- * }
- *
- * Use LinkedListCycle.java's ListNode
- */

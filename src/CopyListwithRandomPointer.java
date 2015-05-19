@@ -32,12 +32,28 @@ public class CopyListwithRandomPointer
         return node;
     }
 
+    /**
+     * Definition for singly-linked list with a random pointer.
+     * class RandomListNode {
+     *     int label;
+     *     RandomListNode next, random;
+     *     RandomListNode(int x) { this.label = x; }
+     * };
+     */
+    class RandomListNode {
+        int label;
+        RandomListNode next, random;
+        RandomListNode(int x) { this.label = x; }
+    }
+
     public static void main(String[] args) {
 
-        RandomListNode head = new RandomListNode(-1);
-        RandomListNode node0 = new RandomListNode(0);
-        RandomListNode node1 = new RandomListNode(1);
-        RandomListNode node2 = new RandomListNode(2);
+        CopyListwithRandomPointer solution = new CopyListwithRandomPointer();
+
+        RandomListNode head = solution.new RandomListNode(-1);
+        RandomListNode node0 = solution.new RandomListNode(0);
+        RandomListNode node1 = solution.new RandomListNode(1);
+        RandomListNode node2 = solution.new RandomListNode(2);
 
         head.next = node0;
         node0.next = node1;
@@ -48,24 +64,8 @@ public class CopyListwithRandomPointer
         node1.random = head;
         node2.random = node0;
 
-        CopyListwithRandomPointer solution = new CopyListwithRandomPointer();
-
         RandomListNode copy = solution.copyRandomList(head);
 
         System.out.println(copy);
     }
 }
-
-/**
- * Definition for singly-linked list with a random pointer.
- * class RandomListNode {
- *     int label;
- *     RandomListNode next, random;
- *     RandomListNode(int x) { this.label = x; }
- * };
- */
-class RandomListNode {
-    int label;
-    RandomListNode next, random;
-    RandomListNode(int x) { this.label = x; }
-};

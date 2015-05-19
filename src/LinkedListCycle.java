@@ -24,56 +24,56 @@ public class LinkedListCycle
         return false;
     }
 
+    /**
+     * Definition for singly-linked list.
+     * class ListNode {
+     *     int val;
+     *     ListNode next;
+     *     ListNode(int x) {
+     *         val = x;
+     *         next = null;
+     *     }
+     * }
+     */
+    class ListNode {
+        int val;
+        ListNode next;
+        ListNode(int x) {
+            val = x;
+            next = null;
+        }
+    }
+
     public static void main(String[] args) {
 
-        ListNode head = new ListNode(0);
+        LinkedListCycle solution = new LinkedListCycle();
+
+        ListNode head = solution.new ListNode(0);
         ListNode node = head;
 
-        node.next = new ListNode(1);
+        node.next = solution.new ListNode(1);
         node = node.next;
-        node.next = new ListNode(2);
+        node.next = solution.new ListNode(2);
         node = node.next;
-        node.next = new ListNode(3);
+        node.next = solution.new ListNode(3);
         node = node.next;
-        node.next = new ListNode(4);
+        node.next = solution.new ListNode(4);
         node = node.next;
-        node.next = new ListNode(5);
+        node.next = solution.new ListNode(5);
         node = node.next;
         ListNode cycle = node;
-        node.next = new ListNode(6);
+        node.next = solution.new ListNode(6);
         node = node.next;
-        node.next = new ListNode(7);
+        node.next = solution.new ListNode(7);
         node = node.next;
-        node.next = new ListNode(8);
+        node.next = solution.new ListNode(8);
         node = node.next;
-        node.next = new ListNode(9);
+        node.next = solution.new ListNode(9);
         node = node.next;
 
         node.next = cycle;
 
-        LinkedListCycle solution = new LinkedListCycle();
         boolean result = solution.hasCycle(head);
         System.out.println(result);
-    }
-}
-
-
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
- * }
- */
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int x) {
-        val = x;
-        next = null;
     }
 }
