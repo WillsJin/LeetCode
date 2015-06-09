@@ -23,12 +23,11 @@ public class MaximalSquare
         }
         for (int k = 1; k < (n > m ? n : m); k++)
         {
-            for (int i = 0; i < matrix.length; i++)
+            for (int i = 0; i < matrix.length - 1; i++)
             {
-                for (int j = 0; j < matrix[i].length; j++)
+                for (int j = 0; j < matrix[i].length - 1; j++)
                 {
-                    if (i + 1 < matrix.length && j + 1 < matrix[i].length
-                            && status[i][j] == k && status[i][j + 1] == k
+                    if (status[i][j] == k && status[i][j + 1] == k
                             && status[i + 1][j] == k && status[i + 1][j + 1] == k) {
 
                         status[i][j] = k + 1;
